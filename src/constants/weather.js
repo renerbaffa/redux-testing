@@ -1,0 +1,1 @@
+export const FETCHING_WEATHER = 'FETCHING_WEATHER'
