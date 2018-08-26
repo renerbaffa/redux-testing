@@ -1,6 +1,5 @@
 import React from 'react'
 
-const Loader = ({show, ...props}) =>
-  show ? <div {...props}>Loading</div> : null
+const Loader = props => <div {...props}>Loading</div>;
 
 export default Loader
