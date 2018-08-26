@@ -4,8 +4,6 @@ import { FAIL, START, SUCCESS } from '../constants/communication';
 const INITIAL_STATE = {
   hasError: false,
   isLoading: false,
-  ids: [],
-  conten: {},
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -19,6 +17,7 @@ export default (state = INITIAL_STATE, action) => {
       return {
         ...state,
         isLoading: false,
+        temperature: action.payload.TEMPERATURE,
       };
     case `${FETCHING_WEATHER}${FAIL}`:
       return {
