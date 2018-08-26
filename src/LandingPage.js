@@ -24,6 +24,7 @@ class LandingPage extends Component {
   render() {
     const {isLoading, hasError, temperature} = this.props;
   
+    // improve here to use render props pattern?
     return (
       <div>
         {isLoading ? (
