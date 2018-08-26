@@ -13,5 +13,9 @@ export const fetchWeather = (stationName = 'aeropuertopalma', period = 'lastdata
     dispatch({
       type: FETCHING_WEATHER,
       payload: request,
+    }).catch(err => {
+      // this catch is only to prevent the error propagation to jest:
+      // https://stackoverflow.com/questions/51760408/should-i-catch-redux-promise-errors-at-dispatch-or-just-handle-it-in-the-reducer
+      console.log('err', err)
     });
   }
